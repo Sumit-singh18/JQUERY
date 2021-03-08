@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>experiment2</title>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+</head>
+<!-- create html documnet using 3 empty hyper links with no hypertext and then set their href propertythrough jquery iteration on wrapper set 
+first hyperlink should be associated with page 1.html  second with page 2,html third with page3.html the abovw said action should be performd when the dome is ready -->
+
+<body>
+    <a href="page1.html"></a><br>
+    <a href="page2.html"></a><br>
+    <a href="page3.html"></a>
+</body>
+<script>
+    $(document).ready(function() {
+        $("a").each(function(index, value) {
+            var pagenum = parseInt(index + 1);
+            var link = "page" + pagenum + ".html";
+            $(this)
+                .text("page" + pagenum)
+                .attr("href", link);
+
+        });
+
+
+    });
+</script>
+
+
+</html>

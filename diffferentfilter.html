@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+
+<body>
+
+    <h1>hellooo</h1>
+    <p>heyyyyy</p>
+    <h2>helllloo tanay</h2>
+    <h4>this is text</h4>
+    <h3>this is another text</h3>
+    <span>hello sumit</span>
+    <div>
+        <p>heyyyy</p>
+
+    </div>
+    <button id="button1">CLICK ME</button>
+
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("#button1").click(function() {
+            $("body > :not(p)").css({
+                "background-color": "red"
+
+            })
+        })
+
+
+    })
+</script>
+
+</html>

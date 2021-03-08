@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment6</title>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<style>
+    span,
+    p {
+        border: 2px solid green;
+    }
+    
+    h1,
+    #name {
+        text-align: center;
+    }
+    
+    #details {
+        border: 1px solid;
+    }
+</style>
+
+<body>
+    <div id="details">
+        <h1>Experiment 6</h1>
+        <center>Name:sumit | Roll Number: 1955991590</center>
+    </div>
+    <p style="border:2px solid; width:25%; margin-left:25%; margin-right:25%">
+        <img style="margin-left:25%;margin-right:25%" height=80 0 width=80 alt="" alt="image"><br>
+        <a id="image1" href="#" title="image1">Image 1</a>
+        <a id="image2" href="#" title="image2">Image 2</a>
+        <a id="image3" href="#" title="image3">Image 3</a>
+    </p>
+    <script>
+        $('document').ready(function() {
+            $('a').click(function() {
+                $('img').attr('src', 'maxresdefault.jpg')
+            });
+            $('#image2').click(function() {
+                $('img').attr('src', 'shutterstock_554314555_copy.jpg')
+            });
+            $('#image3').click(function() {
+                $('img').attr('src', 'maxresdefault.jpg')
+            });
+        })
+    </script>
+
+</body>
+
+</html>

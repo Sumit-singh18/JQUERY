@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <title>lab 1</title>
+</head>
+
+<body>
+    <h2>chitkara university</h2>
+    <div style="width: 50%">
+        <p>hello </p>
+        <p>hello 2</p>
+    </div>
+    <p>hey this is text</p>
+    <b><p>hey this is text 2</p></b>
+    <button id="btn">click me </button>
+</body>
+<script>
+    $(document).ready(function() {
+        $("#btn").click(function() {
+            $("body>*").each(function() {
+                if ($(this).find('p').length >= 1) {
+                    $(this).find('p').filter(':first').text('This is text changed').css({
+                        "color": "red",
+                        "border": "1px solid",
+                    })
+                }
+            })
+
+        })
+
+    })
+</script>
+
+</html>

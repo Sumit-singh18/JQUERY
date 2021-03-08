@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filters</title>
+    <!-- select all the div by removing all divs that have child elements
+    with class s1 -->
+    <!-- select all div by removing  odd div -->
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <div>this is div 1</div>
+    <div><span class="s1"> <strong>span 1</strong></span></div>
+    <div>this is div2 </div>
+    <div><span class="s1">span 2</span></div>
+    <div>this is div3 </div>
+    <div><span class="s1">span 3</span></div>
+    <div>this is div 4</div>
+    <div><span class="s1">span 4</span></div>
+    <div>this is div 5 </div>
+    <div><span class="s1">span 5</span></div>
+</body>
+<script>
+    $(document).ready(function() {
+        // alert($("div:not(:odd)").text());
+        alert($("div:not(:has(.s1))").text());
+        // alert($("body>*").length);
+
+
+
+    });
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>first jquery program</title>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1> MY FIRST JQUERY FUNCTION </h1>
+        <div style="border : 1px solid; width : 200px ; border-color:blueviolet ">this is first div </div>
+        <div style="border : 1px solid; width : 200px ; border-color:blueviolet">this is second div </div>
+        <div style="border : 1px solid; width : 200px ; border-color:blueviolet">this is third div </div>
+        <div id="demo"></div>
+        <button>click to add tag</button>
+    </center>
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#demo").text($("div").text());
+                $("#demo").css({
+                    "border": "4px solid",
+                    "border-color": "black",
+                    "width": "30%",
+                    "height": "30%",
+                    "color": "red"
+
+                });
+
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

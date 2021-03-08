@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>explicit</title>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <div id="text">a</div>
+    <div id="text2">b</div>
+    <div id="text3">c</div>
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("div").each(function() {
+            alert($(this).attr("id"));
+        });
+
+
+    });
+</script>
+
+</html>

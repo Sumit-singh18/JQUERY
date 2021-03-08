@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>experiment 3</title>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+</head>
+<!-- create html document using given code create a empty text area long with a button the user can click on a button after 
+ writing something into text area when the event piarse. it will add  dynamically created div into body of document 
+ the text writeen in text area should appear  into div tag. the user is suppose to ensure that user clcks after writting 
+ something into text area otherwise show an error message -->
+
+<body>
+    <textarea id="newtext"></textarea><br>
+    <button id="action">click to add one more div tag</button>
+    <div></div>
+</body>
+<script>
+    $(document).ready(function() {
+        $("#action").click(function() {
+            var text = $("#newtext").val();
+            if (text != "") {
+                $("div").text(text);
+            } else {
+                alert("error");
+            }
+        });
+    });
+</script>
+
+</html>

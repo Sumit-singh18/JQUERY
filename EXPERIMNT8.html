@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>change image</title>
+    <center>
+        <h1>EXPERIMENT 8</h1>
+        <h3>NAME-SUMIT KUMAR | ROLL NO- 1955991590</h3>
+    </center>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <center>
+        <div>
+            <img src="https://image.cnbcfm.com/api/v1/image/106105342-1567178289995screenshot2019-08-30at11.17.10am.png?v=1567178348" height="150px" width="150px" id="image" /><br />
+        </div>
+        <!-- <button id="btn2">NEXT</button>
+        <button id="btn1">PEVIOUS</button> -->
+        <button id="btn3">ZOOM IN</button>
+        <button id="btn4">ZOOM OUT</button>
+        <!-- <button id="btn5">DEFAULT</button> -->
+    </center>
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("#btn2").click(function() {
+            $("body")
+                .find("img")
+                .attr(
+                    "src",
+                    "https://zdnet3.cbsistatic.com/hub/i/2021/01/07/a20ae151-6384-47c4-a75e-802455021c41/apple-iphone-12-best-phones-review.png",
+                    "height",
+                    "100px",
+                    "width",
+                    "100px"
+                );
+        });
+        $("#btn1").click(function() {
+            $("body")
+                .find("img")
+                .attr(
+                    "src",
+                    "https://image.cnbcfm.com/api/v1/image/106105342-1567178289995screenshot2019-08-30at11.17.10am.png?v=1567178348",
+                    "height",
+                    "100px",
+                    "width",
+                    "100px"
+                );
+        });
+        $("#btn3").click(function() {
+            $("body").find("img").css({
+                height: "170px",
+                width: "170px",
+            });
+        });
+        $("#btn4").click(function() {
+            $("body").find("img").css({
+                height: "130px",
+                width: "130px",
+            });
+        });
+        $("#btn5").click(function() {
+            $("body").find("img").css({
+                height: "150px",
+                width: "150px",
+            });
+        });
+    });
+</script>
+
+</html>

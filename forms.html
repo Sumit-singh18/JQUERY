@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <p>Name: <input type="text" name="user"></p>
+    <p> click on button <input type="checkbox" name="user1"> </p>
+    <p> click on button1 <input type="radio" name="user2"> </p>
+
+    <button>Set the value of the input field</button>
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("button").click(function() {
+            $("input:text").val("new input");
+            $("input:checkbox").attr("checked", "checked");
+            $("input:radio").attr("checked", "checked");
+
+
+
+        });
+
+    });
+</script>
+
+</html>

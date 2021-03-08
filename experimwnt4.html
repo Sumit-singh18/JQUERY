@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXPERIMENT 4</title>
+
+    <h1>EXPERIMENT 4</h1>
+    <h3>NAME-SUMIT KUMAR | ROLL NO- 1955991590</h3>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+
+    <div><span>FIRST PARAGRAPH</span></div>
+    <span>SECOND PARAGRAPH</span>
+    <div><span>THIRD PARAGRAPH</span></div>
+    <div id="act"></div>
+    <button id="action">CLICK TO PERFORM ACTION</button>
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("#action").click(function() {
+            $("div").find("span").css({
+                color: "red"
+            }).text("CONTENT IN SPAN");
+            $("body > span").wrap("<div></div>").css({
+                "border": "1px solid green",
+                color: "green"
+            });
+        });
+    });
+</script>
+
+</html>

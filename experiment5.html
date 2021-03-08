@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 5</title>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <div>
+        <h1>EXPERIMENT 5</h1>
+        <h3>NAME-SUMIT KUMAR | ROLL NO- 1955991590</h3>
+    </div>
+
+
+</head>
+<style>
+    span,
+    p {
+        border: 2px solid green;
+    }
+</style>
+
+<body>
+    <div style="border: 1px solid; width: 30%">
+        <span>span 1</span><span>span 2</span>
+    </div>
+    <span>second paragraph</span>
+    <p><span>third paragraph</span><a href="page1.html">go to page1</a></p>
+    <button id="action">Click to Perform Action</button>
+</body>
+<script>
+    $('document').ready(function() {
+        $('#action').click(function() {
+            $('body>*').each(function() {
+                if ($(this).find('span').length >= 1) {
+                    $(this).find('span').filter(':last').text('This is text').css({
+                        color: 'red',
+                        border: '1px solid red',
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+</html>

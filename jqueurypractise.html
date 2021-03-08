@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery practise</title>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+</head>
+<style>
+    .butt {
+        border-color: blue;
+        color: rgb(23, 202, 47);
+        text-shadow: 0ex;
+        font-size: 50px;
+    }
+    
+    .butt1 {
+        color: blueviolet
+    }
+</style>
+
+<body>
+
+    <div class="butt">
+        <p>this is first paragraph</p>
+        <h1>THIS IS SECOND</h1>
+        <p>this is 3rd</p>
+        <p>this is fourth</p>
+        <button id="btn">click on this button</button>
+    </div>
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("#btn").click(function() {
+            //  $("p").addClass("butt");
+            $("p , h1").toggleClass("butt1");
+            // $("div").removeClass("butt");
+        });
+
+    });
+</script>
+
+
+</html>
