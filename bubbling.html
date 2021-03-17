@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+
+    <h1>this is h1
+
+        <p>hey this is element</p>
+    </h1>
+    <button>click on this</button>
+    <br>
+    <div></div>
+</body>
+<script>
+    $(document).ready(function() {
+        $("h1").click(function(event) {
+            // $("div ").html("you click on" + event.target.nodeName)
+            // $("div") event.target.nodeName.html(" is clicked")
+            alert(event.target).parent()
+            return false;
+        });
+    });
+</script>
+
+</html>
